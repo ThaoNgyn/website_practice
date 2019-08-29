@@ -1,0 +1,24 @@
+//für alle die headline im class Namen haben 
+[class*='headline'] {
+  font-family: "Lato", sans-serif; 
+}
+
+.headline--lg {
+font-size: 24px;
+}
+
+.headline--center {
+  text-align: center;
+}
+
+.headline--grey {
+  color: #777;
+}
+
+.headline-caption {
+  width: 400px;
+  margin: 32px auto; //top and bottom, left and right
+  line-height: 1.8;
+  color: #777;
+  font-style: italic;
+}
