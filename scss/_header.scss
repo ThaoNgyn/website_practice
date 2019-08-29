@@ -4,19 +4,40 @@ header {
   align-items: center; 
   font-family: "Lato", sans-serif;
   font-size: 18px;
-  background-color: blue;
   padding: 0 20px; 
-  color: white;
+  color: #777;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   
-    .navbar {
-      &__item {
-        display: inline-block;
-        padding: 20px 10px;
-      }
-
-      &__link {
-        text-decoration: none;
-        color: white;
-      }
+  .navbar {
+    &__item {
+      display: inline-block;
+      padding: 20px 10px;
     }
+
+    &__link {
+      text-decoration: none;
+      color: #777;
+    }
+  }
+
+  &.is-scroll {
+    background-color: #fff;
+    color: #000;
+    animation-name: slide-in;
+    animation-duration: 0.4s;
+
+    .navbar .navbar__link {
+      color: #000;
+    }
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    top: -50%;
+  }
 }

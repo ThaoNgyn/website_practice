@@ -1,0 +1,21 @@
+.section-hero {
+  background-image: url('/img/parallax1.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover; //Bild nimmt gesamte Fläche ein
+  background-attachment: fixed; //Bild ist fix im Bildschirm, läuft nicht mit scroll
+  height: 100vh; //Bild wird komplett angezeigt, egal wie groß Section ist
+  position: relative;
+  opacity: 0.75;
+
+  &__headline {
+    @include centered(50%, 50%); //nutzen des Mixin
+    background-color: #000;
+    color: #ffff;
+    letter-spacing: 10px;
+    padding: 12px 24px;    
+  }
+}
+
+.section--lg {
+  margin-bottom: 64px;
+}

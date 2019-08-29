@@ -1,0 +1,6 @@
+@mixin centered($horizontal, $vertical) {
+    left: $horizontal; //Element startet bei 50%
+    position: absolute;
+    top: $vertical;
+    transform: translate(-$horizontal, -$vertical); //um 50% zurück verschieben, um Mitt zu erreichen 
+  }

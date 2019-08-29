@@ -10,15 +10,36 @@ header {
   align-items: center;
   font-family: "Lato", sans-serif;
   font-size: 18px;
-  background-color: blue;
   padding: 0 20px;
-  color: white; }
+  color: #777;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; }
   header .navbar__item {
     display: inline-block;
     padding: 20px 10px; }
   header .navbar__link {
     text-decoration: none;
-    color: white; }
+    color: #777; }
+  header.is-scroll {
+    background-color: #fff;
+    color: #000;
+    -webkit-animation-name: slide-in;
+    animation-name: slide-in;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s; }
+    header.is-scroll .navbar .navbar__link {
+      color: #000; }
+
+@-webkit-keyframes slide-in {
+  0% {
+    top: -50%; } }
+
+@keyframes slide-in {
+  0% {
+    top: -50%; } }
 
 html,
 body,
@@ -94,3 +115,84 @@ td,
 th {
   padding: 0;
   text-align: left; }
+
+[class*='headline'] {
+  font-family: "Lato", sans-serif; }
+
+.headline--lg {
+  font-size: 24px; }
+
+.headline--center {
+  text-align: center; }
+
+.headline--grey {
+  color: #777; }
+
+.headline-caption {
+  width: 400px;
+  margin: 32px auto;
+  line-height: 1.8;
+  color: #777;
+  font-style: italic; }
+
+.section-hero {
+  background-image: url("/img/parallax1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  opacity: 0.75; }
+  .section-hero__headline {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    color: #ffff;
+    letter-spacing: 10px;
+    padding: 12px 24px; }
+
+.section--lg {
+  margin-bottom: 64px; }
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 980px;
+  padding: 0 16px; }
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .gallery__item {
+    width: calc((100% / 4) - 20px);
+    margin: 10px;
+    display: none; }
+    .gallery__item.is-displayed {
+      opacity: 1;
+      display: block;
+      -webkit-animation-name: fade-in;
+      animation-name: fade-in;
+      -webkit-animation-duration: 1.5s;
+      animation-duration: 1.5s; }
+    .gallery__item:hover {
+      opacity: 0.5; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

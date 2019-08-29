@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <header>
+  <header class="js-header">
     <ul class="navbar">
       <li class="navbar__item">
-        <a class="navbar__link" href="#">HOME</a>
+        <a class="navbar__link" href="">HOME</a>
       </li>
       <li class="navbar__item">
         <i class="fa fa-user"></i>
@@ -31,9 +31,32 @@
     <i class="fa fa-search"></i>
   </header>
     
-  <section class="section-hero">
-    <h1 class="headline">MY WEBSITE LOGO</h1>
+  <section class="section--lg section-hero">
+    <h1 class="headline--lg section-hero__headline">MY WEBSITE LOGO</h1>
   </section>
+
+  <section class="section--lg js-gallery" data-offset="400">
+    <h2 class="headline--lg headline--center headline--grey">MY WORK</h2>
+    <p class="headline-caption headline--center">Here are some of my latest lorem work ipsum tipsum.
+        Click on the images to make them bigger</p>
     
+    <div class="container"> 
+      <div class="gallery">
+        <img src="/img/p6.jpg" alt="" class="gallery__item">
+        <img src="/img/p6.jpg" alt="" class="gallery__item">
+        <img src="/img/p6.jpg" alt="" class="gallery__item">
+        <img src="/img/p6.jpg" alt="" class="gallery__item">
+        <img src="/img/p6.jpg" alt="" class="gallery__item">
+        <img src="/img/p6.jpg" alt="" class="gallery__item">
+        <img src="/img/p6.jpg" alt="" class="gallery__item">
+        <img src="/img/p6.jpg" alt="" class="gallery__item">
+      </div>
+    </div>
+  </section>
+  
+
+  <div style="height: 1000px;"></div>  
+  <script src="main.js"></script>
+
 </body>
 </html>

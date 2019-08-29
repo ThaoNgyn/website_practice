@@ -1,0 +1,32 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        width: calc((100% / 4) - 20px);
+        margin: 10px;
+        display: none;
+
+        &.is-displayed {
+            opacity: 1;
+            display: block;
+            animation-name: fade-in;
+            animation-duration: 1.5s;
+        }
+        
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+  
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
