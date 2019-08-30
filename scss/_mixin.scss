@@ -4,3 +4,9 @@
     top: $vertical;
     transform: translate(-$horizontal, -$vertical); //um 50% zurück verschieben, um Mitt zu erreichen 
   }
+
+@mixin flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
