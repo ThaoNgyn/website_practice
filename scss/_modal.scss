@@ -14,7 +14,7 @@
   &__image {
     width: 30%;
     animation: zoom-in 1.5s ;
-    pointer-events: none;
+    // pointer-events: none; why you write this line :(
   }
 
   &.is-visible {

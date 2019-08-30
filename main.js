@@ -34,24 +34,24 @@ function addEventOnGalleryImage() {
   const modal = document.querySelector('.modal')
   let modalImage = modal.querySelector('.modal__image')
 
-  galleryImage.forEach(el => {
-    el.addEventListener('click', () => {
+  galleryImage.forEach(item => {
+    item.addEventListener('click', event => {
+      event.stopPropagation()
       modal.classList.add('is-visible')
-      modalImage.src = el.src
+      modalImage.src = item.src
     })
   })
 }
 
 function closeModal() {
   const modal = document.querySelector('.modal')
-  let modalImage = modal.querySelector('.modal__image')
 
   document.querySelector('.modal__close').addEventListener('click', () => {
     modal.classList.remove('is-visible')
   })
 
-  //  document.addEventListener('click', event => {
-  //   if (modalImage.contains(event.target) || event.target.className === 'modal__image') return
-  //   modal.classList.remove('is-visible')
-  // })
+   document.addEventListener('click', event => {
+    if (event.target.className === 'modal__image') return
+    modal.classList.remove('is-visible')
+  })
 }
