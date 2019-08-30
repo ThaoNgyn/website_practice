@@ -1,0 +1,40 @@
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding: 10px 62px 0px 62px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  color: #fff;
+
+  &__image {
+    width: 30%;
+    animation: zoom-in 1.5s ;
+    pointer-events: none;
+  }
+
+  &.is-visible {
+    display: flex;
+    flex-direction: column;
+    @include flex(center, center); 
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0,0)
+  }
+  100% {
+    transform: scale(1,1)
+  }
+}

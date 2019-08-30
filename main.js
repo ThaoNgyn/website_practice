@@ -1,7 +1,8 @@
 (() => {
+  addEventOnGalleryImage()
+  closeModal()
   window.onscroll = function() {header(), gallery()}
 })()
-
 
 function header() {
   const nav = document.querySelector('.js-header')
@@ -22,13 +23,35 @@ function gallery() {
 
     for (let i=0; i<arrayImg.length; i++) {
       setInterval(() => {
-        arrayImg[i].classList.add("is-displayed")
-      }, 1000*i)
+        arrayImg[i].classList.add('is-displayed')
+      }, 300 * i)
     }
   }
 }
 
+function addEventOnGalleryImage() {
+  const galleryImage = [...document.querySelectorAll('.gallery__item')]
+  const modal = document.querySelector('.modal')
+  let modalImage = modal.querySelector('.modal__image')
 
+  galleryImage.forEach(el => {
+    el.addEventListener('click', () => {
+      modal.classList.add('is-visible')
+      modalImage.src = el.src
+    })
+  })
+}
 
+function closeModal() {
+  const modal = document.querySelector('.modal')
+  let modalImage = modal.querySelector('.modal__image')
 
+  document.querySelector('.modal__close').addEventListener('click', () => {
+    modal.classList.remove('is-visible')
+  })
 
+  //  document.addEventListener('click', event => {
+  //   if (modalImage.contains(event.target) || event.target.className === 'modal__image') return
+  //   modal.classList.remove('is-visible')
+  // })
+}
