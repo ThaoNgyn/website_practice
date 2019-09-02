@@ -211,8 +211,7 @@ th {
   .modal__image {
     width: 30%;
     -webkit-animation: zoom-in 1.5s;
-    animation: zoom-in 1.5s;
-    pointer-events: none; }
+    animation: zoom-in 1.5s; }
   .modal.is-visible {
     display: -webkit-box;
     display: -ms-flexbox;
