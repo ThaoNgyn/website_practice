@@ -1,7 +1,5 @@
 .section-hero {
-  background-image: url('/img/parallax1.jpg');
-  background-repeat: no-repeat; 
-  background-size: cover; //Bild nimmt gesamte Fläche ein
+  background-image: url('/img/parallax1.jpg') no-repeat cover; //cover --> Bild nimmt gesamte Fläche ein
   background-attachment: fixed; //Bild ist fix im Bildschirm, läuft nicht mit scroll
   height: 100vh; //Bild wird komplett angezeigt, egal wie groß Section ist
   position: relative;

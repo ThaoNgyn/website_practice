@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <header class="js-header">
+  <header class="js-header text--grey text--md">
     <ul class="navbar">
       <li class="navbar__item">
         <a class="navbar__link" href="">HOME</a>
@@ -26,7 +26,7 @@
         <i class="fa fa-envelope"></i>
         <a class="navbar__link" href="#">CONTACT</a>
       </li>
-      </ul>
+    </ul>
 
     <i class="fa fa-search"></i>
   </header>
@@ -35,28 +35,84 @@
     <h1 class="headline--lg section-hero__headline">MY WEBSITE LOGO</h1>
   </section>
 
-  <section class="section--lg js-gallery" data-offset="400">
-    <h2 class="headline--lg headline--center headline--grey">MY WORK</h2>
-    <p class="headline-caption headline--center">Here are some of my latest lorem work ipsum tipsum.
+  <section class="section--lg section-aboutMe">
+    <h2 class="headline--lg headline--centered headline--grey">ABOUT ME</h2>
+    <p class="headline-caption headline--centered">I love photography</p>
+    <div class="container">
+      <div>
+        <div class="row">
+          <p class="text--sm text--grey">We have created a fictional "personal" website/blog, and our fictional 
+            character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+          </p>
+        </div>
+        <div class="row u-margin-se-1">
+          <div class="col-lg-6 u-padding-lg">
+            <div class="text--centered">
+              <i class="fa fa-user text--grey"></i>
+              <p class="text--sm text--grey">My Name</p>
+            </div>
+            <br>
+            <img src="/img/avatar_hat.jpg" alt="">
+          </div>
+          <div class="col-lg-6 u-padding-lg">
+            <p class="text--sm text--grey">
+                Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod 
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                fugiat nulla pariatur.
+            </p>
+          </div>
+        </div>
+        <div class="u-margin-se-1">
+          <p class="text--grey text--centered text--md u-padding-16 u-margin-se-1">I'm really good at:</p>
+        </div>
+        <div>
+          <i class="fa fa-camera text--grey u-margin-se-1 u-inline"></i>
+          <p class="text--grey text--sm text--spacing-10 u-margin-se-1 u-inline">Photography</p>
+          <div class="progress">
+            <div class="progress-bar w-90 u-padding-sm text--centered">90%</div>
+          </div>
+          <i class="fa fa-laptop text--grey u-margin-se-1 u-inline"></i>
+          <p class="text--grey text--sm text--spacing-10 u-margin-se-1 u-inline">Web Design</p>
+          <div class="progress">
+            <div class="progress-bar w-85 u-padding-sm text--centered">85%</div>
+          </div>
+          <i class="fa fa-image text--grey u-margin-se-1 u-inline"></i>
+          <p class="text--grey text--sm text--spacing-10 u-margin-se-1 u-inline">Photoshop</p>
+          <div class="progress">
+            <div class="progress-bar w-75 u-padding-sm text--centered ">75%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="section--lg js-parallax" data-offset="400">
+    <h3 class="headline--lg headline--centered headline--grey">MY WORK</h3>
+    <p class="headline-caption headline--centered">Here are some of my latest lorem work ipsum tipsum.
         Click on the images to make them bigger</p>
     
     <div class="container"> 
       <div class="gallery">
-        <img src="/img/p6.jpg" alt="typewriter" class="gallery__item">
-        <img src="/img/parallax1.jpg" alt="" class="gallery__item">
-        <img src="/img/p6.jpg" alt="" class="gallery__item">
-        <img src="/img/p6.jpg" alt="" class="gallery__item">
-        <img src="/img/p6.jpg" alt="" class="gallery__item">
-        <img src="/img/p6.jpg" alt="" class="gallery__item">
-        <img src="/img/p6.jpg" alt="" class="gallery__item">
-        <img src="/img/p6.jpg" alt="" class="gallery__item">
+        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
+        <img src="/img/parallax1.jpg" alt="Travel" class="gallery__item js-gallery-item">
+        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
+        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
+        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
+        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
+        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
+        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
       </div>
     </div>
 
-    <div class="modal">
-      <img src="" alt="" class="modal__image">
-      <p class="modal__headline"></p>
-      <p class="modal__close">Close</p>
+    <div class="modal js-modal">
+      <img src="" alt="" class="modal__image js-modal-image">
+      <p class="modal__caption text--grey u-margin-se-1 text--md js-modal-caption"></p>
+      <i class="fa fa-times modal__close js-model-close"></i>
     </div>
   </section>
   

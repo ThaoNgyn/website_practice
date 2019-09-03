@@ -7,24 +7,14 @@
         margin: 10px;
         display: none;
 
-        &.is-displayed {
-            opacity: 1;
-            display: block;
-            animation-name: fade-in;
-            animation-duration: 1.5s;
-        }
-        
         &:hover {
             opacity: 0.5;
         }
-    }
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
+        
+        &.is-displayed {
+            opacity: 1;
+            display: block;
+            animation-name: fade-in 1.5s;
+        }
     }
 }
