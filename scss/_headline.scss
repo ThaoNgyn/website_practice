@@ -1,24 +1,24 @@
 //für alle die headline im class Namen haben 
 [class*='headline'] {
-  font-family: "Lato", sans-serif; 
+  font-family: $font; 
 }
 
 .headline--lg {
-font-size: 24px;
+  font-size: 24px;
 }
 
-.headline--center {
+.headline--centered {
   text-align: center;
 }
 
 .headline--grey {
-  color: #777;
+  color: $color-grey;
 }
 
 .headline-caption {
   width: 400px;
   margin: 32px auto; //top and bottom, left and right
-  line-height: 1.8;
-  color: #777;
+  line-height: $line-height;
+  color: $color-grey;
   font-style: italic;
 }

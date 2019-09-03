@@ -1,0 +1,24 @@
+[class*='text'] {
+  font-family: $font; 
+  line-height: $line-height;
+}
+
+.text--grey {
+  color: $color-grey;
+}
+
+.text--sm {
+  font-size: 15px;
+}
+
+.text--md {
+  font-size: 18px;
+}
+
+.text--centered {
+  text-align: center;
+}
+
+.text--spacing-10 {
+  letter-spacing: 9px;
+}

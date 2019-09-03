@@ -1,11 +1,6 @@
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-  font-family: "Lato", sans-serif;
-  font-size: 18px;
+  @include flex(space-between, center);
   padding: 0 20px; 
-  color: #777;
   position: fixed;
   top: 0;
   left: 0;
@@ -20,24 +15,17 @@ header {
 
     &__link {
       text-decoration: none;
-      color: #777;
+      color: $color-grey;
     }
   }
 
   &.is-scroll {
     background-color: #fff;
-    color: #000;
-    animation-name: slide-in;
-    animation-duration: 0.4s;
+    color: $color-black;
+    animation-name: slide-in 0.4s;
 
     .navbar .navbar__link {
-      color: #000;
+      color: $color-black;
     }
-  }
-}
-
-@keyframes slide-in {
-  0% {
-    top: -50%;
   }
 }
