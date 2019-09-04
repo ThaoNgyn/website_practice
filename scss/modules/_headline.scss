@@ -16,7 +16,7 @@
 }
 
 .headline--grey {
-  color: $color-grey;
+  color: $color-light-grey;
 }
 
 .headline-section {
@@ -29,6 +29,6 @@
   width: 400px;
   margin: 32px auto; //top and bottom, left and right
   line-height: $line-height;
-  color: $color-grey;
+  color: $color-light-grey;
   font-style: italic;
 }

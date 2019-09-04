@@ -1,12 +1,12 @@
 .progress-bar {
-    background-color: #616161;
-    color: #fff;
+    background-color: $color-dark-grey;
+    color: $color-white;
     padding: 0;
 }
 
 .progress {
-    background-color: #f1f1f1;
-    color: #000;
+    background-color: $color-white;
+    color: $color-black;
 }
 
 .w-90 {

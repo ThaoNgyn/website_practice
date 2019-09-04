@@ -1,6 +1,8 @@
 (() => {
   openModal()
   closeModal()
+  goToTop()
+  addEventToNavBar()
   window.onscroll = function() {header(), gallery()}
 })()
 
@@ -58,5 +60,26 @@ function closeModal() {
   document.addEventListener('click', event => {
     if (event.target.classList.contains('js-modal-image')) return
     modal.classList.remove('is-visible')
+  })
+}
+
+//scroll to section when clicking on navbar items
+function addEventToNavBar() {
+  const navItems = [...document.querySelectorAll('.navbar__item')]
+  navItems.forEach(item => {
+    item.addEventListener('click', event => {
+      event.preventDefault()
+      let offset = item.getAttribute('data-offset')
+      let section =  item.getAttribute('data-section')
+      let offsetToTop = document.querySelector(`.${section}`).offsetTop
+      window.scrollTo({ top: offsetToTop-offset, left: 0, behavior: "smooth" })
+    })
+  })
+}
+
+//scroll to top when clicking on button in footer
+function goToTop() {
+  document.querySelector('#toTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
   })
 }

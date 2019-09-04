@@ -8,8 +8,8 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #000;
-  color: #fff;
+  background-color: $color-black;
+  color: $color-white;
   flex-direction: column;
 
   &__image {

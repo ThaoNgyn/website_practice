@@ -1,12 +1,18 @@
 .row {
   display: flex;
- 
+  margin-left: -16px;
+  margin-right: -16px;
+
+  [class*='col'] {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .col-lg-3 {
     flex: 25%;
   } 
 
   .col-lg-4 {
-    flex: (100/3)*1%;
+    flex: calc(100% / 3);
 
     img {
       border-radius: 3%;
@@ -19,15 +25,6 @@
 
   .col-lg-6 {
     flex: 50%;
-  
-    i, p {
-      display: inline;
-      margin-right: 12px;
-    }
-
-    img {
-      opacity: 0.60;
-    }
   }
 }
 
