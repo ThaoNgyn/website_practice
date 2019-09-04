@@ -10,6 +10,18 @@
   }
 }
 
+.section-aboutMe {
+  .row {
+    i, p {
+      display: inline;
+    }
+
+    img {
+      opacity: 0.60;
+    }
+  }
+}
+
 .section-portfolio {
   @include backgroundImg('/img/parallax2.jpg', 40vh, 0.75);
 }
@@ -19,6 +31,13 @@
 }
 
 .section-contact {
+  
+  .info {
+    .fa {
+      width: 7%;
+    }
+  }
+
   input {
     width: 100%;
     height: 45px;

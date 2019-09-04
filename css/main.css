@@ -40,7 +40,7 @@
   padding: 0; }
 
 .progress {
-  background-color: #f1f1f1;
+  background-color: #fff;
   color: #000; }
 
 .w-90 {
@@ -62,7 +62,6 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -70,10 +69,20 @@ header {
   z-index: 100; }
   header .navbar__item {
     display: inline-block;
-    padding: 20px 10px; }
+    padding: 15px 20px; }
+    header .navbar__item:hover {
+      background-color: #E1E1E1;
+      color: #000; }
   header .navbar__link {
     text-decoration: none;
     color: #777; }
+    header .navbar__link:hover {
+      color: #000; }
+  header .fa-search {
+    padding: 22px 22px; }
+    header .fa-search:hover {
+      background-color: #E1E1E1;
+      color: #000; }
   header.is-scroll {
     background-color: #fff;
     color: #000;
@@ -207,6 +216,12 @@ th {
     letter-spacing: 10px;
     padding: 12px 24px; }
 
+.section-aboutMe .row i, .section-aboutMe .row p {
+  display: inline; }
+
+.section-aboutMe .row img {
+  opacity: 0.60; }
+
 .section-portfolio {
   background: url("/img/parallax2.jpg") center/cover no-repeat;
   background-attachment: fixed;
@@ -220,6 +235,9 @@ th {
   height: 40vh;
   position: relative;
   opacity: 0.75; }
+
+.section-contact .info .fa {
+  width: 7%; }
 
 .section-contact input {
   width: 100%;
@@ -318,15 +336,20 @@ th {
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-left: -16px;
+  margin-right: -16px; }
+  .row [class*='col'] {
+    padding-left: 16px;
+    padding-right: 16px; }
   .row .col-lg-3 {
     -webkit-box-flex: 25%;
     -ms-flex: 25%;
     flex: 25%; }
   .row .col-lg-4 {
-    -webkit-box-flex: 33.33333%;
-    -ms-flex: 33.33333%;
-    flex: 33.33333%; }
+    -webkit-box-flex: calc(100% / 3);
+    -ms-flex: calc(100% / 3);
+    flex: calc(100% / 3); }
     .row .col-lg-4 img {
       border-radius: 3%; }
   .row .col-lg-8 {
@@ -337,11 +360,6 @@ th {
     -webkit-box-flex: 50%;
     -ms-flex: 50%;
     flex: 50%; }
-    .row .col-lg-6 i, .row .col-lg-6 p {
-      display: inline;
-      margin-right: 12px; }
-    .row .col-lg-6 img {
-      opacity: 0.60; }
 
 [class*='text'] {
   font-family: "Lato", sans-serif;
@@ -388,11 +406,11 @@ th {
   margin-top: 16px;
   margin-bottom: 16px; }
 
-.u-margin-l-12 {
-  margin-left: 12px; }
-
 .u-inline {
   display: inline; }
+
+.u-width-7 {
+  width: 7%; }
 
 .footer {
   background-color: #000;

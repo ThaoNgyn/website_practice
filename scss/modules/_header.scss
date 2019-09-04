@@ -1,6 +1,5 @@
 header {
-  @include flex(space-between, center);
-  padding: 0 20px; 
+  @include flex(space-between, center); 
   position: fixed;
   top: 0;
   left: 0;
@@ -10,17 +9,35 @@ header {
   .navbar {
     &__item {
       display: inline-block;
-      padding: 20px 10px;
+      padding: 15px 20px;
+
+      &:hover {
+        background-color: $color-middle-grey;
+        color: $color-black;
+      }
     }
 
     &__link {
       text-decoration: none;
-      color: $color-grey;
+      color: $color-light-grey;
+      
+      &:hover {
+        color: $color-black;
+      }
+    }
+  }
+
+  .fa-search {
+    padding: 22px 22px;
+
+    &:hover {
+      background-color: $color-middle-grey;
+      color: $color-black;
     }
   }
 
   &.is-scroll {
-    background-color: #fff;
+    background-color: $color-white;
     color: $color-black;
     animation-name: slide-in 0.4s;
 

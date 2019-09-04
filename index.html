@@ -11,20 +11,20 @@
 <body>
   <header class="js-header text--grey text--md">
     <ul class="navbar">
-      <li class="navbar__item">
+      <li class="navbar__item" data-offset="0" data-section="section-hero">
         <a class="navbar__link" href="">HOME</a>
       </li>
-      <li class="navbar__item">
+      <li class="navbar__item" data-offset="120" data-section="section-aboutMe">
         <i class="fa fa-user"></i>
-        <a class="navbar__link" href="#">ABOUT</a>
+        <a class="navbar__link" href="">ABOUT</a>
       </li>
-      <li class="navbar__item"> 
+      <li class="navbar__item" data-offset="60" data-section="section-portfolio"> 
         <i class="fa fa-th"></i>
-        <a class="navbar__link" href="#">PORTFOLIO</a>
+        <a class="navbar__link" href="">PORTFOLIO</a>
       </li>
-      <li class="navbar__item">
+      <li class="navbar__item" data-offset="50" data-section="section-contact-parallax">
         <i class="fa fa-envelope"></i>
-        <a class="navbar__link" href="#">CONTACT</a>
+        <a class="navbar__link" href="">CONTACT</a>
       </li>
     </ul>
 
@@ -35,20 +35,18 @@
     <h1 class="headline--lg section-hero__headline">MY WEBSITE LOGO</h1>
   </section>
 
-  <section class="section--lg section-aboutMe">
+  <section id="aboutme" class="section--lg section-aboutMe">
     <h2 class="headline--lg headline--centered headline--grey">ABOUT ME</h2>
     <p class="headline-caption headline--centered">I love photography</p>
     <div class="container">
       <div>
-        <div class="row">
-          <p class="text--sm text--grey">We have created a fictional "personal" website/blog, and our fictional 
-            character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-          </p>
-        </div>
+        <p class="text--sm text--grey">We have created a fictional "personal" website/blog, and our fictional 
+          character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+        </p>
         <div class="row u-margin-se-1">
-          <div class="col-lg-6 u-padding-lg">
+          <div class="col-lg-6">
             <div class="text--centered">
               <i class="fa fa-user text--grey"></i>
               <p class="text--sm text--grey">My Name</p>
@@ -56,7 +54,7 @@
             <br>
             <img src="/img/avatar_hat.jpg" alt="">
           </div>
-          <div class="col-lg-6 u-padding-lg">
+          <div class="col-lg-6">
             <p class="text--sm text--grey">
                 Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
@@ -112,11 +110,11 @@
     </div>
   </section>
 
-  <section class="section--lg section-portfolio">
+  <section class="section--lg section-portfolio" data-offset="60">
     <h3 class="headline--xlg headline--centered headline-section">PORTFOLIO</h3>
   </section>
 
-  <section class="section--lg js-parallax" data-offset="400">
+  <section class="section--lg js-parallax" data-offset="600">
     <h4 class="headline--lg headline--centered headline--grey">MY WORK</h4>
     <p class="headline-caption headline--centered">Here are some of my latest lorem work ipsum tipsum.
         Click on the images to make them bigger</p>
@@ -148,26 +146,26 @@
     <h4 class="headline--xlg headline--centered headline-section">CONTACT</h4>
   </section>
 
-  <section class="section--lg section-contact">
+  <section class="section--lg section-contact" data-offset="50">
     <h5 class="headline--lg headline--centered headline--grey">WHERE I WORK</h5>
     <p class="headline-caption headline--centered">I'd love your feedback!</p>
     <div class="container">
       <div class="row text--md text--grey">
-        <div class="col-lg-4 u-padding-lg">
+        <div class="col-lg-4">
           <img src="/img/map.jpg" alt="" class="section-contact__img">
         </div>
         <div class="col-lg-8">
           <div>
-            <i class="fa fa-map-pin u-padding-sm"></i>
-            <p class="u-inline u-margin-l-12">Chicago, US</p>
+            <i class="fa fa-map-pin u-padding-sm u-width-7"></i>
+            <p class="u-inline">Chicago, US</p>
           </div>
           <div>
-            <i class="fa fa-phone u-padding-sm"></i>
-            <p class="u-inline u-margin-l-12">Phone</p>
+            <i class="fa fa-phone u-padding-sm u-width-7"></i>
+            <p class="u-inline">Phone</p>
           </div>
           <div>
-            <i class="fa fa-envelope u-padding-sm"></i>
-            <p class="u-inline u-margin-l-12">Email</p>
+            <i class="fa fa-envelope u-padding-sm u-width-7"></i>
+            <p class="u-inline">Email</p>
           </div>
           <br>
           <p class="u-inline text--sm">Swing by for a cup of</p>
@@ -195,7 +193,7 @@
 
   <footer>
     <div class="footer">
-      <button class="button-light u-padding-lg text--sm">
+      <button id="toTop" class="button-light u-padding-lg text--sm">
         <i class="fa fa-arrow-up u-inline "></i>
         To the top
       </button>
