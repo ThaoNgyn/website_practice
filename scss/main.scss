@@ -1,17 +1,18 @@
 @charset 'UTF-8';
 
-@import 'mixin';
-@import 'header';
-@import 'minireset';
-@import 'headline';
-@import 'section';
-@import 'container';
-@import 'gallery';
-@import 'modal';
-@import 'grid';
-@import 'text';
-@import 'img';
-@import 'util';
-@import 'progress';
-@import 'keyframes';
-@import 'variables';
+@import 'modules/mixin';
+@import 'modules/variables';
+@import 'modules/keyframes';
+@import 'modules/progress';
+
+@import 'modules/header';
+@import 'modules/minireset';
+@import 'modules/headline';
+@import 'modules/section';
+@import 'modules/container';
+@import 'modules/gallery';
+@import 'modules/modal';
+@import 'modules/grid';
+@import 'modules/text';
+@import 'modules/util';
+@import 'modules/footer';

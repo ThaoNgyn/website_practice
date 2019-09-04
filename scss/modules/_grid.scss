@@ -1,5 +1,21 @@
 .row {
   display: flex;
+ 
+  .col-lg-3 {
+    flex: 25%;
+  } 
+
+  .col-lg-4 {
+    flex: (100/3)*1%;
+
+    img {
+      border-radius: 3%;
+    }
+  }
+
+  .col-lg-8 {
+    flex: (100/3)*2%;
+  }
 
   .col-lg-6 {
     flex: 50%;
