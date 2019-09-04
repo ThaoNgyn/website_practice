@@ -1,3 +1,15 @@
 .footer {
   background-color: $color-black;
+  height: 280px;
+  opacity: 0.6;
+  margin-top: 150px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__icons {
+    color: $color-white;
+    margin: 10px;
+  }
 }

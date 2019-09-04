@@ -395,4 +395,12 @@ th {
   display: inline; }
 
 .footer {
-  background-color: #000; }
+  background-color: #000;
+  height: 280px;
+  opacity: 0.6;
+  margin-top: 150px; }
+  .footer:hover {
+    opacity: 1; }
+  .footer__icons {
+    color: #fff;
+    margin: 10px; }
