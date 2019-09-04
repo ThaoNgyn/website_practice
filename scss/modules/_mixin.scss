@@ -10,3 +10,12 @@
   justify-content: $justify-content;
   align-items: $align-items;
 }
+
+@mixin backgroundImg($url, $height, $opacity) {
+  background: url($url) center / cover no-repeat; //cover --> Bild nimmt gesamte Fläche ein
+  background-attachment: fixed; //Bild ist fix im Bildschirm, läuft nicht mit scroll
+  height: $height; //Bild wird komplett angezeigt, egal wie groß Section ist
+  position: relative;
+  opacity: $opacity;
+
+}

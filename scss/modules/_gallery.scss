@@ -1,0 +1,34 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    width: calc((100% / 4) - 20px);
+    margin: 10px;
+    display: none;
+
+    &:hover {
+      opacity: 0.5;
+    }
+    
+    &.is-displayed {
+      opacity: 1;
+      display: block;
+      animation-name: fade-in 1.5s;
+    }
+  }
+}
+
+.button-light {
+  background-color: #f1f1f1; 
+  color: $color-black;
+  margin-top: 64px;
+  border: none;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%);
+
+  &:hover {
+      background-color: #E1E1E1; 
+  }
+}

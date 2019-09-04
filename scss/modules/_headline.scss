@@ -7,12 +7,22 @@
   font-size: 24px;
 }
 
+.headline--xlg {
+  font-size: 36px;
+}
+
 .headline--centered {
   text-align: center;
 }
 
 .headline--grey {
   color: $color-grey;
+}
+
+.headline-section {
+  @include centered(50%, 50%);
+  color: $color-white;
+  letter-spacing: 10px;
 }
 
 .headline-caption {
