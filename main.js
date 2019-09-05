@@ -69,10 +69,10 @@ function addEventToNavBar() {
   const navItems = [...document.querySelectorAll('.navbar__item')]
   navItems.forEach(item => {
     item.addEventListener('click', event => {
-      event.preventDefault()
+      event.preventDefault() //würde normalerweise auf andere Seite verweisen
       let offset = item.getAttribute('data-offset')
       let section =  item.getAttribute('data-section')
-      let offsetToTop = document.querySelector(`.${section}`).offsetTop
+      let offsetToTop = document.querySelector(`.${section}`).offsetTop //template literal
       window.scrollTo({ top: offsetToTop-offset, left: 0, behavior: "smooth" })
       if (item.classList.contains('responsive')) {
         navItems.forEach(i => {

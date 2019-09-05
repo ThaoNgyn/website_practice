@@ -460,6 +460,9 @@ th {
 .text--centered {
   text-align: center; }
 
+.text--justify {
+  text-align: justify; }
+
 .text--spacing-8 {
   letter-spacing: 8px; }
 
