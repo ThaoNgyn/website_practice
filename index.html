@@ -11,18 +11,18 @@
 <body>
   <header class="js-header text--grey text--md">
     <ul class="navbar">
-      <li class="navbar__item" data-offset="0" data-section="section-hero">
+      <li class="navbar__item" data-offset="0" data-section="js-hero">
         <a class="navbar__link" href="">HOME</a>
       </li>
-      <li class="navbar__item" data-offset="120" data-section="section-aboutMe">
+      <li class="navbar__item" data-offset="120" data-section="js-section-aboutMe">
         <i class="fa fa-user"></i>
         <a class="navbar__link" href="">ABOUT</a>
       </li>
-      <li class="navbar__item" data-offset="60" data-section="section-portfolio"> 
+      <li class="navbar__item" data-offset="60" data-section="js-portfolio-parallax"> 
         <i class="fa fa-th"></i>
         <a class="navbar__link" href="">PORTFOLIO</a>
       </li>
-      <li class="navbar__item" data-offset="50" data-section="section-contact-parallax">
+      <li class="navbar__item" data-offset="50" data-section="js-contact-parallax">
         <i class="fa fa-envelope"></i>
         <a class="navbar__link" href="">CONTACT</a>
       </li>
@@ -36,11 +36,11 @@
     </button>
   </header>
     
-  <section class="section--lg section-hero">
+  <section class="section--lg section-hero js-hero">
     <h1 class="headline--lg section-hero__headline">MY WEBSITE LOGO</h1>
   </section>
 
-  <section id="aboutme" class="section--lg section-aboutMe">
+  <section class="section--lg js-section-aboutMe">
     <h2 class="headline--lg headline--centered headline--grey">ABOUT ME</h2>
     <p class="headline-caption headline--centered">I love photography</p>
     <div class="container">
@@ -53,13 +53,13 @@
         <div class="row u-margin-se-1">
           <div class="col-lg-6">
             <div class="text--centered">
-              <i class="fa fa-user text--grey"></i>
-              <p class="text--sm text--grey">My Name</p>
+              <i class="fa fa-user text--grey u-inline"></i>
+              <p class="text--sm text--grey u-inline">My Name</p>
             </div>
             <br>
-            <img src="/img/avatar_hat.jpg" alt="Profile Picture">
+            <img src="/img/avatar_hat.jpg" alt="Profile Picture" class="opacity-06">
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 u-hidden-mobile">
             <p class="text--sm text--grey text--justify">
                 Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
@@ -73,20 +73,20 @@
           <p class="text--grey text--centered text--md u-padding-tb-16 u-margin-se-1">I'm really good at:</p>
         </div>
         <div>
-          <i class="fa fa-camera text--grey u-margin-se-1 u-inline u-width-8"></i>
+          <i class="fa fa-camera text--grey u-margin-se-1 u-inline"></i>
           <p class="text--grey text--sm text--spacing-8 u-margin-se-1 u-inline">Photography</p>
           <div class="progress">
-            <div class="progress-bar w-90 u-padding-sm text--centered">90%</div>
+            <div class="progress-bar u-width-90 u-padding-sm text--centered">90%</div>
           </div>
-          <i class="fa fa-laptop text--grey u-margin-se-1 u-inline u-width-8"></i>
+          <i class="fa fa-laptop text--grey u-margin-se-1 u-inline"></i>
           <p class="text--grey text--sm text--spacing-8 u-margin-se-1 u-inline">Web Design</p>
           <div class="progress">
-            <div class="progress-bar w-85 u-padding-sm text--centered">85%</div>
+            <div class="progress-bar u-width-85 u-padding-sm text--centered">85%</div>
           </div>
-          <i class="fa fa-image text--grey u-margin-se-1 u-inline u-width-8"></i>
+          <i class="fa fa-image text--grey u-margin-se-1 u-inline"></i>
           <p class="text--grey text--sm text--spacing-8 u-margin-se-1 u-inline">Photoshop</p>
           <div class="progress">
-            <div class="progress-bar w-75 u-padding-sm text--centered ">75%</div>
+            <div class="progress-bar u-width-75 u-padding-sm text--centered ">75%</div>
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@
   </section>
 
   <section class="section--grey">
-    <div class="row text--centered u-padding-tb-16">
+    <div class="row text--centered u-padding-tb-16 u-block-mobile u-margin-0-mobile u-max-width-100">
       <div class="col-lg-3 u-margin-tb-16">
         <p class="text--lg"> 14+</p>
         <p class="text--sm">Partners</p>
@@ -114,7 +114,7 @@
     </div>
   </section>
 
-  <section class="section--lg section-portfolio">
+  <section class="section--lg section-portfolio-parallax js-portfolio-parallax">
     <h3 class="headline--xlg headline--centered headline-section">PORTFOLIO</h3>
   </section>
 
@@ -137,7 +137,7 @@
       </div>
     </div>
     <div>
-      <button class="u-padding-lg text--sm button-light">LOAD MORE</button>
+      <button class="u-padding-lg button-centered text--sm button-light">LOAD MORE</button>
     </div>
 
     <div class="modal js-modal">
@@ -147,17 +147,17 @@
     </div>
   </section>
   
-  <section class="section--lg section-contact-parallax">
+  <section class="section--lg section-contact-parallax js-contact-parallax">
     <h4 class="headline--xlg headline--centered headline-section">CONTACT</h4>
   </section>
 
-  <section class="section--lg section-contact">
+  <section class="section--xlg">
     <h5 class="headline--lg headline--centered headline--grey">WHERE I WORK</h5>
     <p class="headline-caption headline--centered">I'd love your feedback!</p>
     <div class="container">
-      <div class="row text--md text--grey">
+      <div class="row text--md text--grey u-margin-0-mobile u-block-mobile">
         <div class="col-lg-4">
-          <img src="/img/map.jpg" alt="" class="section-contact__img">
+          <img src="/img/map.jpg" alt="" class="border-r-3">
         </div>
         <div class="col-lg-8">
           <div>
@@ -177,16 +177,16 @@
           <i class="fa fa-coffee u-inline text--sm"></i>
           <p class="u-inline text--sm">, or leave me a note:</p>
           <form>
-            <div class="row">
-              <div class="col-lg-6 u-margin-tb-16">
-                <input class="text--sm" type="text" placeholder="Name">
+            <div class="row u-block-mobile">
+              <div class="col-lg-6 u-margin-tb-16 u-padding-0-mobile">
+                <input class="text--sm u-form" type="text" placeholder="Name">
               </div>
-              <div class="col-lg-6 u-margin-tb-16">
-                <input class="text--sm" type="text" placeholder="Email">
+              <div class="col-lg-6 u-margin-tb-16 u-padding-0-mobile">
+                <input class="text--sm u-form" type="text" placeholder="Email">
               </div>
             </div>
-            <input class="text--sm" type="text" placeholder="Message">
-            <button class="u-padding-sm text--sm button-dark"> 
+            <input class="text--sm u-form" type="text" placeholder="Message">
+            <button class="u-padding-sm text--sm button-dark button-right"> 
               <i class="fa fa-paper-plane"></i>
               SEND MESSAGE
             </button>
@@ -198,7 +198,7 @@
 
   <footer>
     <div class="footer">
-      <button id="toTop" class="button-light u-padding-lg text--sm">
+      <button id="toTop" class="button-light button-centered u-padding-lg text--sm">
         <i class="fa fa-arrow-up u-inline "></i>
         To the top
       </button>

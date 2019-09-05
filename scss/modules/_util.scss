@@ -1,3 +1,9 @@
+.u-padding-0-mobile {
+  @include respond-to-mobile() {
+    padding: 0;
+  }  
+}
+
 .u-padding-lg {
   padding: 12px 24px;
 }
@@ -14,6 +20,10 @@
   padding-bottom: px;
 }
 
+.u-margin-0-mobile {
+  margin: 0;
+}
+
 .u-margin-se-1 {
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -28,6 +38,44 @@
   display: inline;
 }
 
+.u-block-mobile {
+ @include respond-to-mobile() {
+  display: block;
+ } 
+}
+
 .u-width-8 {
   width: 8%;
 }
+
+.u-width-75 {
+  width: 75%;
+}
+
+.u-width-85 {
+  width: 85%;
+}
+
+.u-width-90 {
+  width: 90%;
+}
+
+.u-max-width-100 {
+  max-width: 100%;
+}
+
+.u-hidden-mobile {
+  @include respond-to-mobile {
+    display: none;
+  }
+}
+
+.u-form {
+  width: 100%;
+  height: 45px;
+  padding: 8px;
+  border: 1px solid $color-light-grey;
+}
+
+
+

@@ -1,0 +1,70 @@
+.button-light {
+  background-color: #f1f1f1; 
+  color: $color-black;
+  border: none;
+
+  &:hover {
+      background-color: $color-middle-grey; 
+  }
+}
+
+.button-dark {
+  background-color: $color-black;
+  color: $color-white;
+  border-color: transparent;
+
+  &:hover {
+    background-color: $color-middle-grey;
+    color: $color-black;
+  }
+}
+
+.button-right {
+  margin-top: 15px;
+  float: right;
+}
+
+.button-centered {
+  margin-top: 64px;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%);
+}
+
+[class*='navbar'] {
+  background-color: transparent;
+  border: transparent;
+}
+
+.navbar-search {
+  padding: 16px;
+  color: $color-light-grey;
+
+  &:hover {
+    background-color: $color-middle-grey;
+    color: $color-black;
+  }
+
+  @include respond-to-mobile() {
+    display: none;
+  }
+}
+
+.navbar-toggler {
+  display: none;
+  color: $color-light-grey;
+
+  &.is-scroll {
+    @include respond-to-mobile() {
+      color: $color-black;
+    }
+  }
+  
+  @include respond-to-mobile() {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    z-index: 200;
+  }
+}

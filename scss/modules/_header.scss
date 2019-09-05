@@ -20,7 +20,7 @@ header {
           display: none;
         }
 
-        &.responsive{
+        &.is-responsive{
           display: block;
           background-color: $color-white;
         }
@@ -42,36 +42,7 @@ header {
     }
   }
 
-  .navbar-search {
-    padding: 16px;
-    background-color: transparent;
-    border: transparent;
-    color: $color-light-grey;
-
-    &:hover {
-      background-color: $color-middle-grey;
-      color: $color-black;
-    }
-
-    @include respond-to-mobile() {
-      display: none;
-    }
-  }
-  
-  .navbar-toggler {
-    display: none;
-    color: $color-light-grey;
-
-    @include respond-to-mobile() {
-      display: block;
-      position: absolute;
-      top: 24px;
-      right: 16px;
-      z-index: 200;
-    }
-  }
-
-  &.is-scroll {
+  &.is-scrolled {
     background-color: $color-white;
     color: $color-black;
     animation-name: slide-in 0.4s;
@@ -79,7 +50,7 @@ header {
     .navbar .navbar__link {
       color: $color-black;
     }
-
+    
     @include respond-to-mobile() {
       .navbar-toggler {
         color: $color-black;

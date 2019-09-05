@@ -17,40 +17,12 @@
   }
 }
 
-.section-aboutMe {
-  .row {
-    i, p {
-      display: inline;
-    }
-
-    img {
-      opacity: 0.60;
-    }
-
-    @include respond-to-mobile() {
-      .col-lg-6 {
-        &:last-child {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
 .section--grey {
   background-color: $color-dark-grey;
   color: $color-white;
-
-  .row {
-    @include respond-to-mobile() {
-      max-width: 100%;
-      display: block;
-      margin: 0;
-    }
-  }
 }
 
-.section-portfolio {
+.section-portfolio-parallax {
   @include backgroundImg('/img/parallax2.jpg', 40vh, 0.75);
   @include respond-to-mobile() {
     @include backgroundImg('/img/parallax2.jpg', 60vh, 0.75);
@@ -64,41 +36,10 @@
   }
 }
 
-.section-contact {
-  .row {
-    @include respond-to-mobile() {
-      display: block;
-      margin: 0;
-    }
-
-    .col-lg-6 {
-      @include respond-to-mobile() {
-        padding: 0;
-      }
-    }
-  }
-  
-  input {
-    width: 100%;
-    height: 45px;
-    padding: 8px;
-    border: 1px solid $color-light-grey;
-  }
-
-  .button-dark {
-    background-color: $color-black;
-    color: $color-white;
-    margin-top: 15px;
-    float: right;
-    border-color: transparent;
-
-    &:hover {
-      background-color: $color-middle-grey;
-      color: $color-black;
-    }
-  }
-}
-
 .section--lg {
   margin-bottom: 64px;
+}
+
+.section--xlg {
+  margin-bottom: 100px;
 }
