@@ -52,10 +52,9 @@ header {
     }
     
     @include respond-to-mobile() {
-      .navbar-toggler {
+      .button-icon-toggler {
         color: $color-black;
       }
     }
   }
 }
-

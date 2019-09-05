@@ -1,42 +1,38 @@
-.button-light {
-  background-color: #f1f1f1; 
-  color: $color-black;
+[class*='button'] {
   border: none;
 
   &:hover {
-      background-color: $color-middle-grey; 
+    background-color: $color-middle-grey; 
   }
+}
+
+[class*='button-icon'] {
+  background-color: transparent;
+  border: transparent;
+}
+
+.button-light {
+  background-color: $color-dark-white; 
+  color: $color-black;
+  border: none;
 }
 
 .button-dark {
   background-color: $color-black;
   color: $color-white;
-  border-color: transparent;
 
   &:hover {
-    background-color: $color-middle-grey;
     color: $color-black;
   }
 }
 
-.button-right {
-  margin-top: 15px;
-  float: right;
-}
-
 .button-centered {
-  margin-top: 64px;
-  left: 50%;
   position: relative;
+  left: 50%;
   transform: translate(-50%);
 }
 
-[class*='navbar'] {
-  background-color: transparent;
-  border: transparent;
-}
-
-.navbar-search {
+.button-icon-search {
   padding: 16px;
   color: $color-light-grey;
 
@@ -50,15 +46,9 @@
   }
 }
 
-.navbar-toggler {
+.button-icon-toggler {
   display: none;
   color: $color-light-grey;
-
-  &.is-scroll {
-    @include respond-to-mobile() {
-      color: $color-black;
-    }
-  }
   
   @include respond-to-mobile() {
     display: block;

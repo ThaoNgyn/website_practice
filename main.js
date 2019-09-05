@@ -4,6 +4,7 @@
   goToTop()
   addEventToNavBar()
   showNavBar()
+  progressBar()
   window.onscroll = function() {header(), gallery()}
 })()
 
@@ -92,11 +93,20 @@ function goToTop() {
 
 //show or hide items of navbar, respond-to-mobile
 function showNavBar() {
-  document.querySelector('.navbar-toggler').addEventListener('click', () => {
+  document.querySelector('.button-icon-toggler').addEventListener('click', () => {
     const navbar = [...document.querySelectorAll('.navbar__item')]
 
     navbar.forEach(item => {
       item.classList.contains('is-responsive') ? item.classList.remove('is-responsive') : item.classList.add('is-responsive')
     })
+  })
+}
+
+//write width to progress bar
+function progressBar() {
+  const bars = [...document.querySelectorAll('.progress__bar')]
+  bars.forEach(item => {
+    let value = item.getAttribute('data-value')
+    item.style.width = `${value}%`
   })
 }
