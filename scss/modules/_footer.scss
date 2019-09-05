@@ -1,8 +1,7 @@
 .footer {
   background-color: $color-black;
-  height: 280px;
+  padding-bottom: 60px;
   opacity: 0.6;
-  margin-top: 150px;
 
   &:hover {
     opacity: 1;
@@ -11,9 +10,5 @@
   &__icons {
     color: $color-white;
     margin: 10px;
-  }
-
-  @include respond-to-mobile() {
-    height: 220px;
   }
 }

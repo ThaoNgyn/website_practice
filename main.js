@@ -11,7 +11,7 @@
 function header() {
   const nav = document.querySelector('.js-header')
   if(!nav)  return //falls keine NavBar vorhanden 
-  document.documentElement.scrollTop > 180 ? nav.classList.add('is-scroll') : nav.classList.remove("is-scroll")
+  document.documentElement.scrollTop > 180 ? nav.classList.add('is-scrolled') : nav.classList.remove("is-scrolled")
 }
 
 //fade in of gallery images when scrolling to gallery section 
@@ -74,9 +74,9 @@ function addEventToNavBar() {
       let section =  item.getAttribute('data-section')
       let offsetToTop = document.querySelector(`.${section}`).offsetTop //template literal
       window.scrollTo({ top: offsetToTop-offset, left: 0, behavior: "smooth" })
-      if (item.classList.contains('responsive')) {
+      if (item.classList.contains('is-responsive')) {
         navItems.forEach(i => {
-          i.classList.remove('responsive')
+          i.classList.remove('is-responsive')
         })
       }
     })
@@ -90,13 +90,13 @@ function goToTop() {
   })
 }
 
+//show or hide items of navbar, respond-to-mobile
 function showNavBar() {
   document.querySelector('.navbar-toggler').addEventListener('click', () => {
     const navbar = [...document.querySelectorAll('.navbar__item')]
 
     navbar.forEach(item => {
-      if (item.classList.contains('responsive')) item.classList.remove('responsive')
-      else item.classList.add('responsive')
+      item.classList.contains('is-responsive') ? item.classList.remove('is-responsive') : item.classList.add('is-responsive')
     })
   })
 }

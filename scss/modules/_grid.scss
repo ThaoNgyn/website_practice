@@ -7,20 +7,17 @@
     padding-left: 16px;
     padding-right: 16px;
   }
+
   .col-lg-3 {
     flex: 25%;
   } 
 
   .col-lg-4 {
     flex: calc(100% / 3);
-
-    img {
-      border-radius: 3%;
-    }
   }
 
   .col-lg-8 {
-    flex: calc((100%/3)*2);
+    flex: calc((100% / 3) * 2);
   }
 
   .col-lg-6 {
