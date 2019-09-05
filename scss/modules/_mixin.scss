@@ -19,3 +19,8 @@
   opacity: $opacity;
 }
 
+@mixin respond-to-mobile() {
+  @media (max-width: 600px) {
+    @content;
+  }
+}

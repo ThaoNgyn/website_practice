@@ -5,11 +5,26 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
+
+  @include respond-to-mobile() {
+    display: block;
+  }
   
   .navbar {
     &__item {
       display: inline-block;
       padding: 15px 20px;
+
+      @include respond-to-mobile() {
+        &:not(:first-child) {
+          display: none;
+        }
+
+        &.responsive{
+          display: block;
+          background-color: $color-white;
+        }
+      }
 
       &:hover {
         background-color: $color-middle-grey;
@@ -27,12 +42,32 @@ header {
     }
   }
 
-  .fa-search {
-    padding: 22px 22px;
+  .navbar-search {
+    padding: 16px;
+    background-color: transparent;
+    border: transparent;
+    color: $color-light-grey;
 
     &:hover {
       background-color: $color-middle-grey;
       color: $color-black;
+    }
+
+    @include respond-to-mobile() {
+      display: none;
+    }
+  }
+  
+  .navbar-toggler {
+    display: none;
+    color: $color-light-grey;
+
+    @include respond-to-mobile() {
+      display: block;
+      position: absolute;
+      top: 24px;
+      right: 16px;
+      z-index: 200;
     }
   }
 
@@ -44,5 +79,12 @@ header {
     .navbar .navbar__link {
       color: $color-black;
     }
+
+    @include respond-to-mobile() {
+      .navbar-toggler {
+        color: $color-black;
+      }
+    }
   }
 }
+
