@@ -12,4 +12,8 @@
     color: $color-white;
     margin: 10px;
   }
+
+  @include respond-to-mobile() {
+    height: 220px;
+  }
 }

@@ -3,6 +3,7 @@
   closeModal()
   goToTop()
   addEventToNavBar()
+  showNavBar()
   window.onscroll = function() {header(), gallery()}
 })()
 
@@ -73,6 +74,11 @@ function addEventToNavBar() {
       let section =  item.getAttribute('data-section')
       let offsetToTop = document.querySelector(`.${section}`).offsetTop
       window.scrollTo({ top: offsetToTop-offset, left: 0, behavior: "smooth" })
+      if (item.classList.contains('responsive')) {
+        navItems.forEach(i => {
+          i.classList.remove('responsive')
+        })
+      }
     })
   })
 }
@@ -81,5 +87,16 @@ function addEventToNavBar() {
 function goToTop() {
   document.querySelector('#toTop').addEventListener('click', () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+  })
+}
+
+function showNavBar() {
+  document.querySelector('.navbar-toggler').addEventListener('click', () => {
+    const navbar = [...document.querySelectorAll('.navbar__item')]
+
+    navbar.forEach(item => {
+      if (item.classList.contains('responsive')) item.classList.remove('responsive')
+      else item.classList.add('responsive')
+    })
   })
 }

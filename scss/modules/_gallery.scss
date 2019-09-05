@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
 
+  @include respond-to-mobile() {
+    display: block;
+  }
+
   &__item {
     width: calc((100% / 4) - 20px);
     margin: 10px;
@@ -15,6 +19,12 @@
       opacity: 1;
       display: block;
       animation-name: fade-in 1.5s;
+    }
+
+    @include respond-to-mobile() {
+      width: 100%;
+      padding: 5px;
+      margin: 0;
     }
   }
 }
