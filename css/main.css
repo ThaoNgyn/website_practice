@@ -110,6 +110,9 @@ header {
   header .is-highlighted {
     background-color: #E1E1E1;
     color: #000; }
+    @media (max-width: 600px) {
+      header .is-highlighted {
+        background-color: transparent; } }
 
 html,
 body,
@@ -511,6 +514,6 @@ th {
 .button-centered {
   position: relative;
   left: 50%;
-  -webkit-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  transform: translate(-50%); }
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }

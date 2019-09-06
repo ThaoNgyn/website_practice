@@ -76,7 +76,8 @@ header {
     animation: slide-in 0.4s;
     
     .navbar {
-      &__link, &__search {
+      &__link, 
+      &__search {
         color: $color-black;
       }
 
@@ -91,5 +92,9 @@ header {
   .is-highlighted {
     background-color: $color-middle-grey;
     color: $color-black;
+
+    @include respond-to-mobile() {
+      background-color: transparent;
+    }
   }
 }
