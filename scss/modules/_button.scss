@@ -1,4 +1,4 @@
-[class*='button'] {
+.button {
   border: none;
 
   &:hover {
@@ -6,9 +6,9 @@
   }
 }
 
-[class*='button-icon'] {
+.button-icon {
+  border: none;
   background-color: transparent;
-  border: transparent;
 }
 
 .button-light {
@@ -30,31 +30,4 @@
   position: relative;
   left: 50%;
   transform: translate(-50%);
-}
-
-.button-icon-search {
-  padding: 16px;
-  color: $color-light-grey;
-
-  &:hover {
-    background-color: $color-middle-grey;
-    color: $color-black;
-  }
-
-  @include respond-to-mobile() {
-    display: none;
-  }
-}
-
-.button-icon-toggler {
-  display: none;
-  color: $color-light-grey;
-  
-  @include respond-to-mobile() {
-    display: block;
-    position: absolute;
-    top: 24px;
-    right: 16px;
-    z-index: 200;
-  }
 }

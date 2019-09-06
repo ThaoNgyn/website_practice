@@ -11,27 +11,27 @@
 <body>
   <header class="js-header text--grey text--md">
     <ul class="navbar">
-      <li class="navbar__item" data-offset="0" data-section="js-hero">
+      <li class="navbar__item js-navbar-item" data-offset="0" data-section="js-hero">
         <a class="navbar__link" href="">HOME</a>
       </li>
-      <li class="navbar__item" data-offset="120" data-section="js-section-aboutMe">
+      <li class="navbar__item js-navbar-item" data-offset="120" data-section="js-section-aboutMe">
         <i class="fa fa-user"></i>
         <a class="navbar__link" href="">ABOUT</a>
       </li>
-      <li class="navbar__item" data-offset="60" data-section="js-portfolio-parallax"> 
+      <li class="navbar__item js-navbar-item" data-offset="60" data-section="js-portfolio-parallax"> 
         <i class="fa fa-th"></i>
         <a class="navbar__link" href="">PORTFOLIO</a>
       </li>
-      <li class="navbar__item" data-offset="50" data-section="js-contact-parallax">
+      <li class="navbar__item js-navbar-item" data-offset="50" data-section="js-contact-parallax">
         <i class="fa fa-envelope"></i>
         <a class="navbar__link" href="">CONTACT</a>
       </li>
     </ul>
 
-    <button class="button-icon-search text--md">
+    <button class="button-icon navbar__search text--md">
       <i class="fa fa-search"></i>
     </button>
-    <button class="button-icon-toggler">
+    <button class="button-icon navbar__toggler js-navbar-toggler">
       <i class="fa fa-bars"></i>
     </button>
   </header>
@@ -50,11 +50,11 @@
           adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
         </p>
-        <div class="row u-mse-1">
-          <div class="col-lg-6">
+        <div class="row u-mtb-16">
+          <div class="col-lg-6 u-w-full-mobile">
             <div class="text--centered">
-              <i class="fa fa-user text--grey u-inline"></i>
-              <p class="text--sm text--grey u-inline">My Name</p>
+              <i class="fa fa-user text--grey u-d-inline"></i>
+              <p class="text--sm text--grey u-d-inline">My Name</p>
             </div>
             <br>
             <img src="/img/avatar_hat.jpg" alt="Profile Picture" class="u-opacity-06">
@@ -69,24 +69,24 @@
             </p>
           </div>
         </div>
-        <div class="u-mse-1">
-          <p class="text--grey text--centered text--md u-ptb-16 u-mse-1">I'm really good at:</p>
+        <div class="u-mtb-16">
+          <p class="text--grey text--centered text--md u-ptb-16 u-mtb-16">I'm really good at:</p>
         </div>
         <div>
-          <i class="fa fa-camera text--grey u-mse-1 u-inline"></i>
-          <p class="text--grey text--sm text--spacing-8 u-mse-1 u-inline">Photography</p>
+          <i class="fa fa-camera text--grey u-mtb-16 u-d-inline"></i>
+          <p class="text--grey text--sm text--spacing-8 u-mtb-16 u-d-inline">Photography</p>
           <div class="progress">
-            <div class="progress__bar u-p-sm text--centered" data-value="90">90%</div>
+            <div class="progress__bar u-p-sm text--centered js-progress-bar" data-value="90"></div>
           </div>
-          <i class="fa fa-laptop text--grey u-mse-1 u-inline"></i>
-          <p class="text--grey text--sm text--spacing-8 u-mse-1 u-inline">Web Design</p>
+          <i class="fa fa-laptop text--grey u-mtb-16 u-d-inline"></i>
+          <p class="text--grey text--sm text--spacing-8 u-mtb-16 u-d-inline">Web Design</p>
           <div class="progress">
-            <div class="progress__bar u-w-85 u-p-sm text--centered" data-value="85">85%</div>
+            <div class="progress__bar u-p-sm text--centered js-progress-bar" data-value="85"></div>
           </div>
-          <i class="fa fa-image text--grey u-mse-1 u-inline"></i>
-          <p class="text--grey text--sm text--spacing-8 u-mse-1 u-inline">Photoshop</p>
+          <i class="fa fa-image text--grey u-mtb-16 u-d-inline"></i>
+          <p class="text--grey text--sm text--spacing-8 u-mtb-16 u-d-inline">Photoshop</p>
           <div class="progress">
-            <div class="progress__bar u-w-75 u-p-sm text--centered" data-value="75">75%</div>
+            <div class="progress__bar u-p-sm text--centered js-progress-bar" data-value="75"></div>
           </div>
         </div>
       </div>
@@ -94,20 +94,20 @@
   </section>
 
   <section class="section--grey">
-    <div class="row text--centered u-ptb-16 u-block-mobile u-no-mar-mobile u-max-width-100">
-      <div class="col-lg-3 u-mtb-16">
+    <div class="row text--centered u-ptb-16 u-d-block-mobile u-no-mar-mobile u-max-width-100">
+      <div class="col-lg-3 u-mtb-16 u-w-full-mobile">
         <p class="text--lg"> 14+</p>
         <p class="text--sm">Partners</p>
       </div>
-      <div class="col-lg-3 u-mtb-16">
+      <div class="col-lg-3 u-mtb-16 u-w-full-mobile">
         <p class="text--lg">55+</p>
         <p class="text--sm">Projects done</p>
       </div>
-      <div class="col-lg-3 u-mtb-16">
+      <div class="col-lg-3 u-mtb-16 u-w-full-mobile">
         <p class="text--lg">89+</p>
         <p class="text--sm">Happy Clients</p>
       </div>
-      <div class="col-lg-3 u-mtb-16">
+      <div class="col-lg-3 u-mtb-16 u-w-full-mobile">
         <p class="text--lg">150+</p>
         <p class="text--sm">Meetings</p>
       </div>
@@ -142,7 +142,7 @@
 
     <div class="modal js-modal">
       <img src="" alt="" class="modal__image js-modal-image">
-      <p class="modal__caption text--grey u-mse-1 text--md js-modal-caption"></p>
+      <p class="modal__caption text--grey u-mtb-16 text--md js-modal-caption"></p>
       <i class="fa fa-times modal__close js-model-close"></i>
     </div>
   </section>
@@ -155,38 +155,38 @@
     <h5 class="headline--lg headline--centered headline--grey">WHERE I WORK</h5>
     <p class="headline-caption headline--centered">I'd love your feedback!</p>
     <div class="container">
-      <div class="row text--md text--grey u-no-mar-mobile u-block-mobile">
-        <div class="col-lg-4">
+      <div class="row text--md text--grey u-no-mar-mobile u-d-block-mobile">
+        <div class="col-lg-4 u-w-full-mobile">
           <img src="/img/map.jpg" alt="" class="u-border-r-3">
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-8 u-w-full-mobile">
           <div>
             <i class="fa fa-map-pin u-p-sm u-width-8"></i>
-            <p class="u-inline">Chicago, US</p>
+            <p class="u-d-inline">Chicago, US</p>
           </div>
           <div>
             <i class="fa fa-phone u-p-sm u-width-8"></i>
-            <p class="u-inline">Phone</p>
+            <p class="u-d-inline">Phone</p>
           </div>
           <div>
             <i class="fa fa-envelope u-p-sm u-width-8"></i>
-            <p class="u-inline">Email</p>
+            <p class="u-d-inline">Email</p>
           </div>
           <br>
-          <p class="u-inline text--sm">Swing by for a cup of</p>
-          <i class="fa fa-coffee u-inline text--sm"></i>
-          <p class="u-inline text--sm">, or leave me a note:</p>
+          <p class="u-d-inline text--sm">Swing by for a cup of</p>
+          <i class="fa fa-coffee u-d-inline text--sm"></i>
+          <p class="u-d-inline text--sm">, or leave me a note:</p>
           <form>
-            <div class="row u-block-mobile">
-              <div class="col-lg-6 u-mtb-16 u-no-pad-mobile">
+            <div class="row u-d-block-mobile u-no-mar-mobile">
+              <div class="col-lg-6 u-mtb-16 u-no-pad-mobile u-w-full-mobile">
                 <input class="text--sm u-form" type="text" placeholder="Name">
               </div>
-              <div class="col-lg-6 u-mtb-16 u-no-pad-mobile">
+              <div class="col-lg-6 u-mtb-16 u-no-pad-mobile u-w-full-mobile">
                 <input class="text--sm u-form" type="text" placeholder="Email">
               </div>
             </div>
             <input class="text--sm u-form" type="text" placeholder="Message">
-            <button class="u-p-sm text--sm button-dark u-mt-15 u-fr "> 
+            <button class="u-p-sm text--sm button-dark u-mt-15 u-float-right "> 
               <i class="fa fa-paper-plane"></i>
               SEND MESSAGE
             </button>
@@ -196,10 +196,10 @@
     </div>
   </section>
 
-  <footer>
-    <div class="footer">
-      <button id="toTop" class="button-light button-centered u-mt-64 u-p-lg text--sm">
-        <i class="fa fa-arrow-up u-inline "></i>
+  <footer class="footer">
+    <div>
+      <button id="toTop" class="button-light button-centered u-p-lg text--sm">
+        <i class="fa fa-arrow-up u-d-inline "></i>
         To the top
       </button>
       <div class="footer__icons text--lg text--centered u-mt-15">

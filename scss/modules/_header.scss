@@ -40,21 +40,56 @@ header {
         color: $color-black;
       }
     }
+
+    &__search {
+      padding: 15px;
+      color: $color-light-grey;
+
+      &:hover {
+        background-color: $color-middle-grey;
+        color: $color-black;
+      }
+
+      @include respond-to-mobile() {
+        display: none;
+        color: $color-black;
+      }
+    }
+
+    &__toggler {
+      display: none;
+      color: $color-light-grey;
+      
+      @include respond-to-mobile() {
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 16px;
+        z-index: 200;
+      }
+    }
   }
 
   &.is-scrolled {
     background-color: $color-white;
     color: $color-black;
-    animation-name: slide-in 0.4s;
-
-    .navbar .navbar__link {
-      color: $color-black;
-    }
+    animation: slide-in 0.4s;
     
-    @include respond-to-mobile() {
-      .button-icon-toggler {
+    .navbar {
+      &__link, &__search {
         color: $color-black;
       }
+
+      @include respond-to-mobile() {
+        &__toggler {
+          color: $color-black;
+        }
+      }
     }
+  }
+
+  .was-clicked {
+    background-color: $color-middle-grey;
+    color: $color-black;
   }
 }

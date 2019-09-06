@@ -12,7 +12,7 @@
 function header() {
   const nav = document.querySelector('.js-header')
   if(!nav)  return //falls keine NavBar vorhanden 
-  document.documentElement.scrollTop > 180 ? nav.classList.add('is-scrolled') : nav.classList.remove("is-scrolled")
+  (document.documentElement.scrollTop > 180 || document.body.scrollTop > 180) ? nav.classList.add('is-scrolled') : nav.classList.remove("is-scrolled")
 }
 
 //fade in of gallery images when scrolling to gallery section 
@@ -67,14 +67,15 @@ function closeModal() {
 
 //scroll to section when clicking on navbar items
 function addEventToNavBar() {
-  const navItems = [...document.querySelectorAll('.navbar__item')]
+  const navItems = [...document.querySelectorAll('.js-navbar-item')]
   navItems.forEach(item => {
     item.addEventListener('click', event => {
       event.preventDefault() //würde normalerweise auf andere Seite verweisen
       let offset = item.getAttribute('data-offset')
       let section =  item.getAttribute('data-section')
       let offsetToTop = document.querySelector(`.${section}`).offsetTop //template literal
-      window.scrollTo({ top: offsetToTop-offset, left: 0, behavior: "smooth" })
+      window.scrollTo({ top: offsetToTop-offset, left: 0, behavior: "smooth"})
+      
       if (item.classList.contains('is-responsive')) {
         navItems.forEach(i => {
           i.classList.remove('is-responsive')
@@ -87,26 +88,26 @@ function addEventToNavBar() {
 //scroll to top when clicking on button in footer
 function goToTop() {
   document.querySelector('#toTop').addEventListener('click', () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth"})
   })
 }
 
 //show or hide items of navbar, respond-to-mobile
 function showNavBar() {
-  document.querySelector('.button-icon-toggler').addEventListener('click', () => {
-    const navbar = [...document.querySelectorAll('.navbar__item')]
-
+  document.querySelector('.js-navbar-toggler').addEventListener('click', () => {
+    const navbar = [...document.querySelectorAll('.js-navbar-item')]
     navbar.forEach(item => {
       item.classList.contains('is-responsive') ? item.classList.remove('is-responsive') : item.classList.add('is-responsive')
     })
   })
 }
 
-//write width to progress bar
+//write width and text to progress bar
 function progressBar() {
-  const bars = [...document.querySelectorAll('.progress__bar')]
+  const bars = [...document.querySelectorAll('.js-progress-bar')]
   bars.forEach(item => {
     let value = item.getAttribute('data-value')
     item.style.width = `${value}%`
+    item.innerHTML = `${value}%`
   })
 }
