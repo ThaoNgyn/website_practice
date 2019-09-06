@@ -5,7 +5,7 @@
   addEventToNavBar()
   showNavBar()
   progressBar()
-  window.onscroll = function() {header(), gallery()}
+  window.onscroll = function() {header(), gallery(), changeColorNavBarItems()}
 })()
 
 //change style of navigation after scrolling 
@@ -74,7 +74,7 @@ function addEventToNavBar() {
       let offset = item.getAttribute('data-offset')
       let section =  item.getAttribute('data-section')
       let offsetToTop = document.querySelector(`.${section}`).offsetTop //template literal
-      window.scrollTo({ top: offsetToTop-offset, left: 0, behavior: "smooth"})
+      window.scrollTo({ top: offsetToTop - offset + 1, left: 0, behavior: "smooth"})
       
       if (item.classList.contains('is-responsive')) {
         navItems.forEach(i => {
@@ -82,6 +82,22 @@ function addEventToNavBar() {
         })
       }
     })
+  })
+}
+
+//highlight navbar item when in that section
+function changeColorNavBarItems() {
+  const navItems = [...document.querySelectorAll('.js-navbar-item')]
+  navItems.forEach(item => {
+    let offset = item.getAttribute('data-offset')
+    let heightOffset = item.getAttribute('data-height')
+    let sectionName =  item.getAttribute('data-section')
+    let section = document.querySelector(`.${sectionName}`)
+    let offsetToTop = section.offsetTop - offset
+    let heightOfSection = section.offsetHeight - heightOffset
+    let endOfSection = offsetToTop + heightOfSection 
+
+    document.documentElement.scrollTop < endOfSection && document.documentElement.scrollTop > offsetToTop? item.classList.add('is-highlighted') : item.classList.remove('is-highlighted')
   })
 }
 

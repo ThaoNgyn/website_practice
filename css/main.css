@@ -107,7 +107,7 @@ header {
     @media (max-width: 600px) {
       header.is-scrolled .navbar__toggler {
         color: #000; } }
-  header .was-clicked {
+  header .is-highlighted {
     background-color: #E1E1E1;
     color: #000; }
 
