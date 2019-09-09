@@ -1,5 +1,4 @@
 (() => {
-  getScrollTop()
   openModal()
   closeModal()
   goToTop()
@@ -78,7 +77,7 @@ function addEventToNavBar() {
       event.preventDefault() //würde normalerweise auf andere Seite verweisen
       let section =  item.getAttribute('data-section')
       let offsetToTop = document.querySelector(`.${section}`).offsetTop //template literal
-      smoothVerticalScrolling(700, offsetToTop + 1)
+      smoothVerticalScrolling(500, offsetToTop + 1)
 
       if (item.classList.contains('is-responsive')) {
         navItems.forEach(i => {
@@ -98,10 +97,10 @@ function changeColorNavBarItems() {
     let sectionName =  item.getAttribute('data-section')
     let section = document.querySelector(`.${sectionName}`)
     let offsetToTop = section.offsetTop - offset
-    let heightOfSection = section.offsetHeight - heightOffset
+    let heightOfSection = +section.offsetHeight + +heightOffset
     let endOfSection = offsetToTop + heightOfSection 
 
-    getScrollTop() < endOfSection && getScrollTop() > offsetToTop? item.classList.add('is-highlighted') : item.classList.remove('is-highlighted')
+    getScrollTop() < endOfSection && getScrollTop() > offsetToTop ? item.classList.add('is-highlighted') : item.classList.remove('is-highlighted')
   })
 }
 
@@ -135,10 +134,10 @@ function progressBar() {
 
 function smoothVerticalScrolling(time, offset) {
   let steps = (offset - getScrollTop()) / 100
-  let curTime = 0;
+  let curTime = 0
   while (curTime <= time) {
-    window.setTimeout(SVS_B, curTime, steps);
-    curTime += time / 100;
+    window.setTimeout(SVS_B, curTime, steps)
+    curTime += time / 100
   }
 }
 
