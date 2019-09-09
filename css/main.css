@@ -295,6 +295,10 @@ th {
   width: 980px;
   padding: 0 16px; }
 
+.container-full {
+  max-width: 100%;
+  padding: 0 16px; }
+
 .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -306,6 +310,7 @@ th {
       display: block; } }
   .gallery__item {
     width: calc((100% / 4) - 20px);
+    height: 50%;
     margin: 10px;
     display: none; }
     .gallery__item:hover {
@@ -491,9 +496,9 @@ th {
   .footer__icons {
     color: #fff; }
 
-.button {
+[class*='button'] {
   border: none; }
-  .button:hover {
+  [class*='button']:hover {
     background-color: #E1E1E1; }
 
 .button-icon {
