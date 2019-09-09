@@ -1,5 +1,6 @@
 .section-hero {
   @include backgroundImg('/img/parallax1.jpg', 100vh, 0.75);
+
   @include respond-to-mobile() {
     @include backgroundImg('/img/parallax1.jpg', 75vh, 0.75);
   }
@@ -24,6 +25,7 @@
 
 .section-portfolio-parallax {
   @include backgroundImg('/img/parallax2.jpg', 40vh, 0.75);
+
   @include respond-to-mobile() {
     @include backgroundImg('/img/parallax2.jpg', 60vh, 0.75);
   }
@@ -31,6 +33,7 @@
 
 .section-contact-parallax {
   @include backgroundImg('/img/parallax3.jpg', 40vh, 0.75);
+
   @include respond-to-mobile() {
     @include backgroundImg('/img/parallax3.jpg', 60vh, 0.75);
   }

@@ -4,21 +4,26 @@
   goToTop()
   addEventToNavBar()
   showNavBar()
-  window.onscroll = function() {header(), gallery()}
+  progressBar()
+  window.onscroll = function() {header(), gallery(), changeColorNavBarItems()}
 })()
+
+function getScrollTop() {
+  return Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
+}
 
 //change style of navigation after scrolling 
 function header() {
   const nav = document.querySelector('.js-header')
   if(!nav)  return //falls keine NavBar vorhanden 
-  document.documentElement.scrollTop > 180 ? nav.classList.add('is-scrolled') : nav.classList.remove("is-scrolled")
+  getScrollTop() > 180 ? nav.classList.add('is-scrolled') : nav.classList.remove("is-scrolled")
 }
 
 //fade in of gallery images when scrolling to gallery section 
 function gallery() {
   const gallerySection = document.querySelector('.js-parallax')
   let galleryPosition = gallerySection.offsetTop
-  let scrollBarPosition = document.documentElement.scrollTop
+  let scrollBarPosition = getScrollTop()
   let dataOffset = gallerySection.getAttribute('data-offset')
   const arrayImg = [...document.querySelectorAll('.js-gallery-item')]
 
@@ -66,14 +71,14 @@ function closeModal() {
 
 //scroll to section when clicking on navbar items
 function addEventToNavBar() {
-  const navItems = [...document.querySelectorAll('.navbar__item')]
+  const navItems = [...document.querySelectorAll('.js-navbar-item')]
   navItems.forEach(item => {
     item.addEventListener('click', event => {
       event.preventDefault() //würde normalerweise auf andere Seite verweisen
-      let offset = item.getAttribute('data-offset')
       let section =  item.getAttribute('data-section')
       let offsetToTop = document.querySelector(`.${section}`).offsetTop //template literal
-      window.scrollTo({ top: offsetToTop-offset, left: 0, behavior: "smooth" })
+      smoothVerticalScrolling(500, offsetToTop + 1)
+
       if (item.classList.contains('is-responsive')) {
         navItems.forEach(i => {
           i.classList.remove('is-responsive')
@@ -83,20 +88,59 @@ function addEventToNavBar() {
   })
 }
 
+//highlight navbar item when in that section
+function changeColorNavBarItems() {
+  const navItems = [...document.querySelectorAll('.js-navbar-item')]
+  navItems.forEach(item => {
+    let offset = item.getAttribute('data-offset')
+    let heightOffset = item.getAttribute('data-height')
+    let sectionName =  item.getAttribute('data-section')
+    let section = document.querySelector(`.${sectionName}`)
+    let offsetToTop = section.offsetTop - offset
+    let heightOfSection = +section.offsetHeight + +heightOffset
+    let endOfSection = offsetToTop + heightOfSection 
+
+    getScrollTop() < endOfSection && getScrollTop() > offsetToTop ? item.classList.add('is-highlighted') : item.classList.remove('is-highlighted')
+  })
+}
+
 //scroll to top when clicking on button in footer
 function goToTop() {
   document.querySelector('#toTop').addEventListener('click', () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    smoothVerticalScrolling(400, 0)
+    
   })
 }
 
 //show or hide items of navbar, respond-to-mobile
 function showNavBar() {
-  document.querySelector('.navbar-toggler').addEventListener('click', () => {
-    const navbar = [...document.querySelectorAll('.navbar__item')]
-
+  document.querySelector('.js-navbar-toggler').addEventListener('click', () => {
+    const navbar = [...document.querySelectorAll('.js-navbar-item')]
     navbar.forEach(item => {
       item.classList.contains('is-responsive') ? item.classList.remove('is-responsive') : item.classList.add('is-responsive')
     })
   })
+}
+
+//write width and text to progress bar
+function progressBar() {
+  const bars = [...document.querySelectorAll('.js-progress-bar')]
+  bars.forEach(item => {
+    let value = item.getAttribute('data-value')
+    item.style.width = `${value}%`
+    item.innerHTML = `${value}%`
+  })
+}
+
+function smoothVerticalScrolling(time, offset) {
+  let steps = (offset - getScrollTop()) / 100
+  let curTime = 0
+  while (curTime <= time) {
+    window.setTimeout(SVS_B, curTime, steps)
+    curTime += time / 100
+  }
+}
+
+function SVS_B(steps) {
+  window.scrollBy(0,  steps)
 }

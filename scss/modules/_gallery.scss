@@ -8,6 +8,7 @@
 
   &__item {
     width: calc((100% / 4) - 20px);
+    height: 50%;
     margin: 10px;
     display: none;
 
@@ -26,6 +27,5 @@
       padding: 5px;
       margin: 0;
     }
-  }
+   }
 }
-

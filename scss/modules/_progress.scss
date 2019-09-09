@@ -1,10 +1,10 @@
-.progress-bar {
+.progress {
+  background-color: $color-dark-white;
+  color: $color-black;
+
+  &__bar {
     background-color: $color-dark-grey;
     color: $color-white;
-    padding: 0;
-}
-
-.progress {
-    background-color: $color-dark-white;
-    color: $color-black;
+    padding: 6px 0;
+  }
 }

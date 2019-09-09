@@ -1,28 +1,18 @@
+[class*='col'] {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 .row {
   display: flex;
   margin-left: -16px;
   margin-right: -16px;
 
-  [class*='col'] {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+  @for $i from 1 through 12 {
+    $width: percentage(($i / 12));
 
-  .col-lg-3 {
-    flex: 25%;
-  } 
-
-  .col-lg-4 {
-    flex: calc(100% / 3);
-  }
-
-  .col-lg-8 {
-    flex: calc((100% / 3) * 2);
-  }
-
-  .col-lg-6 {
-    flex: 50%;
+    .col-lg-#{$i} {
+      width: #{$width};
+    }
   }
 }
-
-
