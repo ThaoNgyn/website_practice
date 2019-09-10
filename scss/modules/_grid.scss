@@ -15,4 +15,8 @@
       width: #{$width};
     }
   }
+  
+  @include respond-to-mobile() {
+    display: block;
+  }
 }

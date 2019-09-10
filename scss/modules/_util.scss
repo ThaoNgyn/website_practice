@@ -17,6 +17,10 @@
   padding-bottom: 16px;
 }
 
+.u-pt-16 {
+  padding-top: 16px;
+}
+
 .u-no-mar-mobile{
   @include respond-to-mobile() {
     margin: 0;
@@ -58,6 +62,10 @@
   @include respond-to-mobile() {
    width: 100% !important; 
   }
+}
+
+.u-hidden {
+  display: none;
 }
 
 .u-hidden-mobile {

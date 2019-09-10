@@ -1,15 +1,9 @@
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-
-  @include respond-to-mobile() {
-    display: block;
-  }
-
   &__item {
-    width: calc((100% / 4) - 20px);
+    width: calc(100% / 4);
     height: 50%;
-    margin: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     display: none;
 
     &:hover {
@@ -19,11 +13,11 @@
     &.is-displayed {
       opacity: 1;
       display: block;
-      animation-name: fade-in 1.5s;
+      animation: fade-in 1.5s;
     }
 
     @include respond-to-mobile() {
-      width: 100%;
+      width: 100% !important;
       padding: 5px;
       margin: 0;
     }

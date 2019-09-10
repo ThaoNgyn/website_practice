@@ -1,4 +1,5 @@
 (() => {
+  loadMoreGallery()
   openModal()
   closeModal()
   goToTop()
@@ -21,20 +22,40 @@ function header() {
 
 //fade in of gallery images when scrolling to gallery section 
 function gallery() {
-  const gallerySection = document.querySelector('.js-parallax')
-  let galleryPosition = gallerySection.offsetTop
-  let scrollBarPosition = getScrollTop()
-  let dataOffset = gallerySection.getAttribute('data-offset')
+  const startPos = document.querySelector('.js-portfolio-parallax').offsetTop
+  const heightNavbar = outerHeight(document.querySelector('.js-header'))
   const arrayImg = [...document.querySelectorAll('.js-gallery-item')]
 
-  if (scrollBarPosition >= galleryPosition - dataOffset) {
-
-    for (let i = 0; i < arrayImg.length; i++) {
+  if (getScrollTop() >= startPos - heightNavbar) {
+    for (let i = 0; i < 8; i++) {
       setInterval(() => {
         arrayImg[i].classList.add('is-displayed')
       }, 300 * i)
     }
   }
+  if (arrayImg.length == 8) hideLoadMoreBtn()
+}
+
+function loadMoreGallery() {
+  const loadMoreBtn = document.documentElement.querySelector('.js-gallery-loadMore')
+  loadMoreBtn.addEventListener('click', () => {
+    const arrayImg = [...document.querySelectorAll('.js-gallery-item')]
+    let num = 0;
+    arrayImg.length <= 16 ? num = arrayImg.length : num = 16;
+
+    for (let i = 0; i < num; i++) {
+      setInterval(() => {
+        arrayImg[i].classList.add('is-displayed')
+      }, 300 * (i - 8))
+    }
+
+    hideLoadMoreBtn()
+  })
+}
+
+function hideLoadMoreBtn() {
+  const loadMoreBtn = document.documentElement.querySelector('.js-gallery-loadMore')
+  loadMoreBtn.classList.add('u-hidden')
 }
 
 //open modal when clicking on gallery image
@@ -72,12 +93,13 @@ function closeModal() {
 //scroll to section when clicking on navbar items
 function addEventToNavBar() {
   const navItems = [...document.querySelectorAll('.js-navbar-item')]
+  const heightNavbar = outerHeight(document.querySelector('.js-header'))
   navItems.forEach(item => {
     item.addEventListener('click', event => {
       event.preventDefault() //würde normalerweise auf andere Seite verweisen
       let section =  item.getAttribute('data-section')
       let offsetToTop = document.querySelector(`.${section}`).offsetTop //template literal
-      smoothVerticalScrolling(500, offsetToTop + 1)
+      doScrolling(offsetToTop - heightNavbar + 1, 500)
 
       if (item.classList.contains('is-responsive')) {
         navItems.forEach(i => {
@@ -91,24 +113,23 @@ function addEventToNavBar() {
 //highlight navbar item when in that section
 function changeColorNavBarItems() {
   const navItems = [...document.querySelectorAll('.js-navbar-item')]
+  const heightNavbar = outerHeight(document.querySelector('.js-header'))
+  calcHeightGallery()
   navItems.forEach(item => {
-    let offset = item.getAttribute('data-offset')
     let heightOffset = item.getAttribute('data-height')
     let sectionName =  item.getAttribute('data-section')
     let section = document.querySelector(`.${sectionName}`)
-    let offsetToTop = section.offsetTop - offset
-    let heightOfSection = +section.offsetHeight + +heightOffset
+    let offsetToTop = section.offsetTop - heightNavbar
+    let heightOfSection = +outerHeight(section) + +heightOffset 
     let endOfSection = offsetToTop + heightOfSection 
-
-    getScrollTop() < endOfSection && getScrollTop() > offsetToTop ? item.classList.add('is-highlighted') : item.classList.remove('is-highlighted')
+    getScrollTop() < endOfSection && getScrollTop() >= offsetToTop ? item.classList.add('is-highlighted') : item.classList.remove('is-highlighted')
   })
 }
 
 //scroll to top when clicking on button in footer
 function goToTop() {
   document.querySelector('#toTop').addEventListener('click', () => {
-    smoothVerticalScrolling(400, 0)
-    
+    doScrolling(0, 500)
   })
 }
 
@@ -132,15 +153,39 @@ function progressBar() {
   })
 }
 
-function smoothVerticalScrolling(time, offset) {
-  let steps = (offset - getScrollTop()) / 100
-  let curTime = 0
-  while (curTime <= time) {
-    window.setTimeout(SVS_B, curTime, steps)
-    curTime += time / 100
-  }
+//get full height of element 
+function outerHeight(element) {
+  var height = element.offsetHeight;
+  var style = getComputedStyle(element);
+
+  height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+  return height;
 }
 
-function SVS_B(steps) {
-  window.scrollBy(0,  steps)
+function calcHeightGallery() {
+  const navItem = document.documentElement.querySelector('li:nth-child(3)')
+  let dataHeight = outerHeight(document.documentElement.querySelector('.js-gallery'))
+  navItem.setAttribute("data-height", dataHeight)
+}
+
+//smooth scrolling
+function doScrolling(elementY, duration) { 
+  let startingY = window.pageYOffset;
+  let diff = elementY - startingY;
+  let start;
+
+  window.requestAnimationFrame(function step(timestamp) {
+    if (!start) start = timestamp;
+    // Elapsed milliseconds since start of scrolling.
+    let time = timestamp - start;
+    // Get percent of completion in range [0, 1].
+    let percent = Math.min(time / duration, 1);
+
+    window.scrollTo(0, startingY + diff * percent);
+
+    // Proceed with animation as long as we wanted it to.
+    if (time < duration) {
+      window.requestAnimationFrame(step);
+    }
+  })
 }

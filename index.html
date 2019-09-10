@@ -11,14 +11,14 @@
 <body>
   <header class="js-header text--grey text--md">
     <ul class="navbar">
-      <li class="navbar__item js-navbar-item" data-offset="0" data-height="0" data-section="js-hero">
+      <li class="navbar__item js-navbar-item" data-height="0" data-section="js-hero">
         <a class="navbar__link" href="">HOME</a>
       </li>
-      <li class="navbar__item js-navbar-item" data-height="100" data-section="js-section-aboutMe">
+      <li class="navbar__item js-navbar-item" data-height="134" data-section="js-section-aboutMe">
         <i class="fa fa-user"></i>
         <a class="navbar__link" href="">ABOUT</a>
       </li>
-      <li class="navbar__item js-navbar-item" data-height="680" data-section="js-portfolio-parallax"> 
+      <li class="navbar__item js-navbar-item" data-height="693" data-section="js-portfolio-parallax"> 
         <i class="fa fa-th"></i>
         <a class="navbar__link" href="">PORTFOLIO</a>
       </li>
@@ -41,7 +41,7 @@
   </section>
 
   <section class="section--lg js-section-aboutMe">
-    <h2 class="headline--lg headline--centered headline--grey">ABOUT ME</h2>
+    <h2 class="headline--lg headline--centered headline--grey u-pt-16">ABOUT ME</h2>
     <p class="headline-caption headline--centered">I love photography</p>
     <div class="container">
       <div>
@@ -120,7 +120,7 @@
       <h3 class="headline--xlg headline--centered headline-section">PORTFOLIO</h3>
   </section>
 
-  <section class="section--lg js-parallax" data-offset="400">
+  <section class="section--lg js-gallery">
     <h4 class="headline--lg headline--centered headline--grey">MY WORK</h4>
     <p class="headline-caption headline--centered">
       Here are some of my latest lorem work ipsum tipsum.
@@ -128,18 +128,34 @@
     </p>
     <div class="container"> 
       <div class="gallery">
-        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
-        <img src="/img/parallax1.jpg" alt="Travel" class="gallery__item js-gallery-item">
-        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
-        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
-        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
-        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
-        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
-        <img src="/img/p6.jpg" alt="Typewriter" class="gallery__item js-gallery-item">
+        <div class="row">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+        </div>
+        <div class="row">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+        </div>
+        <div class="row">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+        </div>
+        <div class="row">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+            <img src="/img/p6.jpg" alt="Typewriter" class="col-lg-3 gallery__item js-gallery-item">
+        </div>
       </div>
     </div>
     <div>
-      <button class="u-p-lg button-centered u-mt-64 text--sm button-light">LOAD MORE</button>
+      <button class="u-p-lg button-centered u-mt-64 text--sm button-light js-gallery-loadMore">LOAD MORE</button>
     </div>
 
     <div class="modal js-modal">
