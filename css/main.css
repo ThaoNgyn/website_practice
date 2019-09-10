@@ -223,14 +223,14 @@ th {
   font-style: italic; }
 
 .section-hero {
-  background: url("/img/parallax1.jpg") center/cover no-repeat;
+  background: url("https://thaongyn.github.io/website_practice/img/parallax1.jpg") center/cover no-repeat;
   background-attachment: fixed;
   height: 100vh;
   position: relative;
   opacity: 0.75; }
   @media (max-width: 600px) {
     .section-hero {
-      background: url("/img/parallax1.jpg") center/cover no-repeat;
+      background: url("https://thaongyn.github.io/website_practice/img/parallax1.jpg") center/cover no-repeat;
       background-attachment: fixed;
       height: 75vh;
       position: relative;
@@ -255,28 +255,28 @@ th {
   color: #fff; }
 
 .section-portfolio-parallax {
-  background: url("/img/parallax2.jpg") center/cover no-repeat;
+  background: url("https://thaongyn.github.io/website_practice/img/parallax2.jpg") center/cover no-repeat;
   background-attachment: fixed;
   height: 40vh;
   position: relative;
   opacity: 0.75; }
   @media (max-width: 600px) {
     .section-portfolio-parallax {
-      background: url("/img/parallax2.jpg") center/cover no-repeat;
+      background: url("https://thaongyn.github.io/website_practice/img/parallax2.jpg") center/cover no-repeat;
       background-attachment: fixed;
       height: 60vh;
       position: relative;
       opacity: 0.75; } }
 
 .section-contact-parallax {
-  background: url("/img/parallax3.jpg") center/cover no-repeat;
+  background: url("https://thaongyn.github.io/website_practice/img/parallax3.jpg") center/cover no-repeat;
   background-attachment: fixed;
   height: 40vh;
   position: relative;
   opacity: 0.75; }
   @media (max-width: 600px) {
     .section-contact-parallax {
-      background: url("/img/parallax3.jpg") center/cover no-repeat;
+      background: url("https://thaongyn.github.io/website_practice/img/parallax3.jpg") center/cover no-repeat;
       background-attachment: fixed;
       height: 60vh;
       position: relative;
