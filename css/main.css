@@ -223,7 +223,7 @@ th {
   font-style: italic; }
 
 .section-hero {
-  background: url("img/parallax1.jpg") center/cover no-repeat;
+  background: url("/img/parallax1.jpg") center/cover no-repeat;
   background-attachment: fixed;
   height: 100vh;
   position: relative;
