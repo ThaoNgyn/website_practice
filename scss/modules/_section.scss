@@ -1,5 +1,5 @@
 .section-hero {
-  @include backgroundImg('/img/parallax1.jpg', 100vh, 0.75);
+  @include backgroundImg('img/parallax1.jpg', 100vh, 0.75);
 
   @include respond-to-mobile() {
     @include backgroundImg('/img/parallax1.jpg', 75vh, 0.75);
